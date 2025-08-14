@@ -26,18 +26,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
-        $mail->Host       = 'smtp.ethereal.email';
+        $mail->Host       = 'smtp.codezeera.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'ernestine3@ethereal.email'; 
-        $mail->Password   = 'tJsfyBfnK7ETKRXw1d';
+        $mail->Username   = 'vikash@codezeera.com'; 
+        $mail->Password   = "OE0B&x9Djb'M";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        $mail->setFrom('no-reply@example.com', 'Portfolio Contact Form');
+        $mail->setFrom('vikash@codezeera.com', 'Portfolio Contact Form');
         $mail->addAddress('aryavikash793@gmail.com'); 
 
-        $mail->Subject = "New Contact Form Submission from $name";
-        $mail->Body    = "Name: $name\nEmail: $email\nMessage:\n$message";
+        $mail->isHTML(true); // Enable HTML email
+        $mail->Subject = "New Message from Portfolio Contact Form - $name";
+
+        $mail->Body = "
+            <h2 style='color: #333;'>Message Received ✉️</h2>
+            <p><strong>Name:</strong> {$name}</p>
+            <p><strong>Email:</strong> {$email}</p>
+            <p><strong>Message:</strong>
+            {$message}</p>
+            <hr>
+            <p style='font-size: 12px; color: #666;'>This message was sent from your portfolio contact form.</p>
+        ";
+
+        $mail->AltBody = "Name: $name\nEmail: $email\nMessage:\n$message"; // Fallback for non-HTML clients
 
         $mail->send();
         http_response_code(200);

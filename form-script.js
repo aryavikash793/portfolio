@@ -23,17 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
 
             const href = this.getAttribute('href');
-            const sectionId = href.startsWith('/') ? href.slice(1) : href.replace('#', '');
+            const sectionId = href.replace(/^.*#/, ''); // Gets ID after last #
+
             const target = document.getElementById(sectionId);
 
             if (target) {
-                const scrollPos = target.offsetTop - SCROLL_OFFSET;
-                window.scrollTo({ top: scrollPos, behavior: 'smooth' });
+                // Direct jump without smooth scroll
+                location.hash = sectionId;
 
-                // Update URL path without reloading
-                history.pushState(null, '', '/' + sectionId);
-
-                // Update active link
+                // Update active classes
                 navLinks.forEach(l => l.classList.remove('active', 'text-[#03FF0E]'));
                 this.classList.add('active', 'text-[#03FF0E]');
 
@@ -59,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             navLinks.forEach(link => {
                 link.classList.remove('active', 'text-[#03FF0E]');
-                const href = link.getAttribute('href').replace('/', '').replace('#', '');
+                const href = link.getAttribute('href').replace(/^#/, '');
                 if (href === current) {
                     link.classList.add('active', 'text-[#03FF0E]');
                 }
@@ -70,14 +68,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // On Page Load: Scroll to section based on URL path
-    const currentPath = window.location.pathname.slice(1);
-    if (currentPath) {
-        const targetSection = document.getElementById(currentPath);
+    const currentHash = window.location.hash.replace('#', '');
+    if (currentHash) {
+        const targetSection = document.getElementById(currentHash);
         if (targetSection) {
             const scrollPos = targetSection.offsetTop - SCROLL_OFFSET;
             window.scrollTo({ top: scrollPos, behavior: 'smooth' });
         }
     }
+
 
     // Contact Form AJAX Submission
     const form = document.getElementById("contact-form");

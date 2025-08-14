@@ -32,18 +32,18 @@
         <!-- Navigation -->
         <nav class="bg-gray-800 backdrop-blur-sm p-4 sticky top-0 z-50">
             <div class="container mx-auto flex justify-between items-center">
-                <a href="/home" class="text-2xl font-bold">Portfolio</a>
+                <a href="#home" class="text-2xl font-bold">Portfolio</a>
                 <!-- Hamburger Menu Button for Mobile -->
                 <button id="nav-toggle" class="md:hidden text-white focus:outline-none" aria-label="Toggle navigation">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
                 <!-- Navigation Links -->
                 <div id="nav-menu" class="flex-col md:flex-row md:flex space-y-4 md:space-y-0 md:space-x-6 absolute md:static top-16 left-0 w-full md:w-auto bg-gray-800/90 backdrop-blur-sm md:bg-transparent p-4 md:p-0">
-                    <a href="/home" class="nav-link text-[#03FF0E] hover:text-green-400 transition active">Home</a>
-                    <a href="/about" class="nav-link hover:text-green-400 transition">About</a>
-                    <a href="/skills" class="nav-link hover:text-green-400 transition">Skills</a>
-                    <a href="/projects" class="nav-link hover:text-green-400 transition">Projects</a>
-                    <a href="/contact" class="nav-link hover:text-green-400 transition">Contact</a>
+                    <a href="#home" class="nav-link text-[#03FF0E] hover:text-green-400 transition active">Home</a>
+                    <a href="#about" class="nav-link hover:text-green-400 transition">About</a>
+                    <a href="#skills" class="nav-link hover:text-green-400 transition">Skills</a>
+                    <a href="#projects" class="nav-link hover:text-green-400 transition">Projects</a>
+                    <a href="#contact" class="nav-link hover:text-green-400 transition">Contact</a>
                 </div>
             </div>
         </nav>
@@ -61,7 +61,7 @@
                 <p class="text-base sm:text-lg text-gray-300 mb-6">
                     I'm passionate about building backend services and scalable applications using modern PHP frameworks.
                 </p>
-                    <a href="/contact" class="bg-[#03FF0E] text-gray-900 px-6 py-3 rounded-lg hover:bg-green-400 transition inline-block">Hire Me</a>
+                    <a href="#contact" class="bg-[#03FF0E] text-gray-900 px-6 py-3 rounded-lg hover:bg-green-400 transition inline-block">Hire Me</a>
                     <div class="mt-6 flex justify-center md:justify-start space-x-4">
                         <a href="https://github.com/aryavikash793" class="text-2xl hover:text-[#03FF0E]"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/vikash-arya-2a09942b4" class="text-2xl hover:text-[#03FF0E]"><i class="fab fa-linkedin"></i></a>
@@ -215,7 +215,7 @@
                             <img src="./assets/projects/project2.png" alt="EasyOrder Review App" class="w-full h-40 sm:h-48 object-cover">
                         </a>
                         <div class="p-4 sm:p-6">
-                            <h3 class="text-lg sm:text-xl font-semibold mb-2">EasyOrder Review</h3>
+                            <h3 class="text-lg sm:text-xl font-semibold mb-2">EasyOrder Review Shopify App</h3>
                             <p class="text-gray-300 text-sm sm:text-base mb-4">An e-commerce plugin developed for Shopify to manage post-purchase order edits and reviews.</p>
                             <a href="https://apps.shopify.com/easyorder-review?surface_intra_position=4&surface_type=partners&surface_version=redesign" class="text-[#03FF0E] hover:underline text-sm sm:text-base">View Project</a>
                         </div>
@@ -240,7 +240,7 @@
         <section id="contact" class="py-12 sm:py-16 bg-gray-800/70 backdrop-blur-sm">
             <div class="container mx-auto px-4">
                 <h2 class="relative text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#03FF0E]">
-                  Contact me
+                  Contact Me
                   <span class="block w-24 h-1 bg-[#03FF0E] mx-auto mt-2 rounded-full"></span>
                 </h2>
                 <div class="max-w-lg mx-auto">
@@ -272,7 +272,7 @@
 
                 <!-- Right Side (Social Icons) -->
                 <div class="flex space-x-4 text-white">
-                    <a href="tel:+919616295193" class="text-xl sm:text-2xl hover:text-[#03FF0E]">
+                    <a href="https://wa.me/919616295193" class="text-xl sm:text-2xl hover:text-[#03FF0E]">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                    <a href="mailto: aryavikash793@gmail.com" class="text-xl sm:text-2xl hover:text-[#03FF0E]">
