@@ -26,14 +26,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
-        $mail->Host       = 'smtp.codezeera.com';
+        $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'vikash@codezeera.com'; 
-        $mail->Password   = "OE0B&x9Djb'M";
+        $mail->Username   = 'your_email@gmail.com'; 
+        $mail->Password   = "your_app_password";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        $mail->setFrom('vikash@codezeera.com', 'Portfolio Contact Form');
+        $mail->setFrom('your_email@gmail.com', 'Portfolio Contact Form');
         $mail->addAddress('aryavikash793@gmail.com'); 
 
         $mail->isHTML(true); // Enable HTML email
